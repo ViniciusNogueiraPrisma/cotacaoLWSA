@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #000f2e;
+  --color-secondary: #00d7b5;
+  --font-rf-dewi: "RF Dewi", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+$font-rf-dewi: "RF Dewi", sans-serif;
+$font-inter: "Inter", sans-serif;
+
+// === PALETA PRINCIPAL ===
+$color-primary: #000f2e;
+$color-secondary: #00d7b5;
+
+// === ESCALA DE CINZA ===
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// === FEEDBACK ===
+$color-success: #28a745;
+$color-error: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+// === TEXTO ===
+$text-color: $gray-900;
+$text-muted: $gray-600;
+$text-light: $gray-100;
+
+// === FUNDO ===
+$background-default: #ffffff;
+$background-muted: $gray-100;
+$background-dark: $gray-900;

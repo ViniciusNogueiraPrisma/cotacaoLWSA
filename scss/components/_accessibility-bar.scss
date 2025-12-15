@@ -1,0 +1,166 @@
+.accessibility-bar {
+  position: fixed;
+  top: 330px;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accessibility-bar-content {
+  width: auto;
+  overflow: hidden;
+  max-width: 50px;
+  border-radius: 4px 0 0 4px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 3px;
+  padding-right: 8px;
+  border-radius: 8px 0 0 8px;
+  background: #333;
+
+  // display: flex;
+  // flex-direction: column;
+  // gap: 8px;
+
+  transition: max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    max-width: 200px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    .text {
+      opacity: 1;
+      max-width: 200px;
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+        max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+    }
+
+    .decrease-link {
+      opacity: 1;
+      max-height: 50px;
+      max-width: 100%;
+      pointer-events: auto;
+
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+        max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        margin 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+      padding-top: 12px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  .text {
+    opacity: 0;
+    max-width: 0;
+    white-space: nowrap;
+    margin-left: 0;
+    overflow: hidden;
+
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+  }
+
+  .decrease-link {
+    // opacity: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    max-width: 0;
+    // margin-top: 8px;
+    overflow: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+}
+
+.accessibility-btn {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  width: 100%;
+  border-radius: 4px;
+  white-space: nowrap;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 14px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  .icon {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   font-weight: 700;
+    //   width: 16px;
+  }
+
+  &[style*="opacity: 0.5"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.accessibility-btn.decrease-font {
+  margin: 0;
+}
+
+// Bootstrap tooltip customization
+.tooltip {
+  z-index: 10000;
+
+  .tooltip-inner {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .tooltip-arrow::before {
+    border-left-color: rgba(0, 0, 0, 0.9);
+  }
+}
